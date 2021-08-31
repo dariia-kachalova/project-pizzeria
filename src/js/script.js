@@ -210,7 +210,7 @@
     setValue(value) {
       const thisWidget = this,
         newValue = parseInt(value);
-      if (newValue !== thisWidget.value && newValue >= 1 && newValue <= 9) {
+      if (newValue !== thisWidget.value && newValue >= settings.amountWidget.defaultMin && newValue <= settings.amountWidget.defaultMax) {
         thisWidget.value = newValue;
         thisWidget.announce();
       }
