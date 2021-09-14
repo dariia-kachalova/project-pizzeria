@@ -37,17 +37,18 @@ export const select = {
       wrapper: '.hour-picker',
       input: 'input[type="range"]',
       output: '.output',
-    },
-    booking: {
-      peopleAmount: '.people-amount',
-      hoursAmount: '.hours-amount',
-      tables: '.floor-plan .table',
-    },
-    nav: {
-      links: '.main-nav a',
-    },
+    }, 
 
   },
+  booking: {
+    peopleAmount: '.people-amount',
+    hoursAmount: '.hours-amount',
+    tables: '.floor-plan .table',
+  },
+  nav: {
+    links: '.main-nav a',
+  },
+
   cart: {
     productList: '.cart__order-summary',
     toggleTrigger: '.cart__summary',
@@ -65,8 +66,7 @@ export const select = {
     price: '.cart__product-price',
     edit: '[href="#edit"]',
     remove: '[href="#remove"]',
-  },
-
+  }
 };
 export const classNames = {
   menuProduct: {
