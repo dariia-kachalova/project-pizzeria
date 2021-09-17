@@ -95,6 +95,15 @@ export const settings = {
   cart: {
     defaultDeliveryFee: 20,
   },
+
+  datePicker:{
+    maxDaysInFuture: 14,
+  },
+  hours:{
+    open: 12,
+    close: 24,
+  },
+
   widgets: {
     datePicker: {
       wrapper: '.date-picker',
