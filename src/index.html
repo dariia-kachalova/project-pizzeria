@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pizzeria</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,300i,700%7COswald:300,500,700&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,300i,700%7COswald:300,500,700&amp;subset=latin-ext"
+    rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/flickity.min.css" media="screen">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="vendor/range-slider.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -21,9 +24,10 @@
           <h2 class="logo__subtitle">the best homemade Italian food</h2>
         </div>
         <div class="main-nav">
+          <a href="#home">Home</a>
           <a href="#order">Order</a>
           <a href="#booking">Booking</a>
-      </div>
+        </div>
         <div id="cart" class="cart">
           <div class="cart__summary">
             <span class="cart__total-number">0</span>
@@ -62,6 +66,9 @@
   </header>
 
   <div id="pages">
+    <section id="home">
+      <div class="home-wrapper container"></div>
+    </section>
     <section id="order">
       <div id="product-list" class="product-list container"></div>
     </section>
@@ -69,6 +76,152 @@
       <div class="booking-wrapper container"></div>
     </section>
   </div>
+  <script id="template-home-widget" type="text/x-handlebars-template">
+    <div class="home-widget">
+      <div class="starter">
+        <div class="order-online">
+          <div class="starter-text">
+            <a href="#order">
+              <h2>ORDER ONLINE</h2>
+              <p class="hover-text">Grab a discount by booking on our site!</p>
+            </a>
+          </div>
+          <img class="starter-photo" src="images/home/pizza-1.jpg">
+        </div>
+        <div class="book-table">
+          <div class="starter-text">
+            <a href="#booking">
+              <h2>BOOK A TABLE</h2>
+              <p>Book a place to have fun with friends!</p>
+            </a>
+          </div>
+          <img class="starter-photo" src="images/home/pizza-2.jpg">
+        </div>
+      </div>
+      <div class="open-hours">
+        <h3>OPENING HOURS:</h3>
+        <p>TUE-SUN, 12PM - 12AM</p>
+      </div>
+      <div class="opinions">
+        <div class="main-carousel" data-flickity='{ "autoPlay": 1500, "pauseAutoPlayOnHover": false }'>'>
+          <div class="carousel-cell">
+            <div class="opinion">
+              <div class="opinion-image">
+                <img src="images/home/pizza-3.jpg">
+              </div>
+              <div class="opinion-description">
+                <h3 class="opinion-tittle">Great Service!</h3>
+                <p class="opinion-text">Is post each that just leaf no. He connection interested so we an sympathize advantages. To said is it shed want do. </p>
+                <p class="opinion-author">- Ivan Ivanov</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div class="opinion">
+              <div class="opinion-image">
+                <img src="images/home/pizza-3.jpg">
+              </div>
+              <div class="opinion-description">
+                <h3 class="opinion-tittle">Tasty meals</h3>
+                <p class="opinion-text">As you can easily notice the second block of text looks more realistic</p>
+                <p class="opinion-author">- Ozzy Osbourne</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div class="opinion">
+              <div class="opinion-image">
+                <img src="images/home/pizza-3.jpg">
+              </div>
+              <div class="opinion-description">
+                <h3 class="opinion-tittle">Great venue</h3>
+                <p class="opinion-text">Breakfast procuring nay end happiness allowance assurance frankness.</p>
+                <p class="opinion-author">- Tina Turner</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery">
+        <div class="gallery-flex">
+          <div class="hover-1">
+            <div class="icons">
+              <a href="#love">
+                <i class="fas fa-heart"></i>
+              </a>
+              <a href="#share">
+                <i class="fas fa-share-alt"></i>
+              </a>
+            </div>
+            <img src="images/home/pizza-4.jpg">
+          </div>
+          <div class="hover-1">
+            <div class="icons">
+              <a href="#love">
+                <i class="fas fa-heart"></i>
+              </a>
+              <a href="#share">
+                <i class="fas fa-share-alt"></i>
+              </a>
+            </div class="hover-1">
+            <img src="images/home/pizza-5.jpg">
+          </div>
+          <div class="hover-1">
+            <div class="icons">
+              <a href="#love">
+                <i class="fas fa-heart"></i>
+              </a>
+              <a href="#share">
+                <i class="fas fa-share-alt"></i>
+              </a>
+            </div>
+            <img src="images/home/pizza-6.jpg">
+          </div>
+        </div>
+        <div class="gallery-flex">
+          <div class="hover-1">
+            <div class="icons">
+              <a href="#love">
+                <i class="fas fa-heart"></i>
+              </a>
+              <a href="#share">
+                <i class="fas fa-share-alt"></i>
+              </a>
+            </div>
+            <img src="images/home/pizza-7.jpg">
+          </div>
+          <div class="hover-1">
+            <div class="icons">
+              <a href="#love">
+                <i class="fas fa-heart"></i>
+              </a>
+              <a href="#share">
+                <i class="fas fa-share-alt"></i>
+              </a>
+            </div>
+            <img src="images/home/pizza-8.jpg">
+          </div>
+          <div class="hover-1">
+            <div class="icons">
+              <a href="#love">
+                <i class="fas fa-heart"></i>
+              </a>
+              <a href="#share">
+                <i class="fas fa-share-alt"></i>
+              </a>
+            </div>
+            <img src="images/home/pizza-9.jpg">
+          </div>
+        </div>
+      </div>
+      <footer>
+        <a href="#instagram"><p class="footer">View more on Instagram <i class="fab fa-instagram"></i></p></a>
+        <a href="#telegram"><p class="footer">Read us on Telegram <i class="fab fa-telegram"></i></p></a>
+        <a href="#facebook"><p class="footer">Follow us on Facebook <i class="fab fa-facebook"></i></p></a>
+      </footer>
+    </div>
+  </script>
+
   <script id="template-booking-widget" type="text/x-handlebars-template">
     <div class="booking-widget">
       <h2 class="page__title no-spacing">Book a table</h2>
@@ -244,7 +397,8 @@
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="vendor/flickity.pkgd.min.js"></script>
   <script src="vendor/range-slider.min.js"></script>
-  <script src="js/app.js"type="module"></script>
+  <script src="js/app.js" type="module"></script>
 </body>
 </html>

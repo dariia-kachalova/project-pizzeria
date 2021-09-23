@@ -7,7 +7,7 @@ class Cart{
     const thisCart = this;
     thisCart.products = [];
     thisCart.getElements(element);
-    console.log('new cart', thisCart);
+    //console.log('new cart', thisCart);
     thisCart.initActions();
   }
 
@@ -45,7 +45,7 @@ class Cart{
 
   add(menuProduct){
     const thisCart = this;
-    console.log('adding product', menuProduct);
+    //console.log('adding product', menuProduct);
     const generatedHTML = templates.cartProduct(menuProduct);
     const generatedDOM = utils.createDOMFromHTML(generatedHTML);
     thisCart.dom.productList.appendChild(generatedDOM);

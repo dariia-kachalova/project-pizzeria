@@ -3,12 +3,14 @@ export const select = {
     menuProduct: '#template-menu-product',
     cartProduct: '#template-cart-product',
     bookingWidget: '#template-booking-widget',
+    homeWidget: '#template-home-widget',
   },
   containerOf: {
     menu: '#product-list',
     cart: '#cart',
     pages: '#pages',
     booking: '.booking-wrapper',
+    home: '.home-wrapper',
   },
   all: {
     menuProducts: '#product-list > .product',
@@ -61,9 +63,20 @@ export const select = {
     peopleAmount: '.people-amount',
     hoursAmount: '.hours-amount',
     tables: '.floor-plan .table',
+    floorPlan: '.floor-plan',
+    form: '.booking-form',
+    bookButton: '.order-confirmation [type="submit"]',
+    starters: '[name="starter"]',
+    phoneNumber: '.order-confirmation [type="tel"]',
+    address: '.order-confirmation [type="text"]',
   },
   nav: {
     links: '.main-nav a',
+  },
+  home: {
+    options: '.options a',
+    order: '.order-online',
+    book: '.book-table',
   },
 };
 
@@ -78,6 +91,7 @@ export const classNames = {
   booking: {
     loading: 'loading',
     tableBooked: 'booked',
+    tableSelected: 'selected',
   },
   nav: {
     active: 'active',
@@ -103,6 +117,9 @@ export const settings = {
     open: 12,
     close: 24,
   },
+  booking: {
+    tableIdAttribute: 'data-table',
+  },
 
   widgets: {
     datePicker: {
@@ -115,11 +132,7 @@ export const settings = {
       output: '.output',
     },
   },
-  booking: {
-    peopleAmount: '.people-amount',
-    hoursAmount: '.hours-amount',
-    tables: '.floor-plan .table',
-  },
+  
   nav: {
     links: '.main-nav a',
   },
@@ -140,6 +153,7 @@ export const templates = {
   menuProduct: Handlebars.compile(document.querySelector(select.templateOf.menuProduct).innerHTML),
   cartProduct: Handlebars.compile(document.querySelector(select.templateOf.cartProduct).innerHTML),
   bookingWidget: Handlebars.compile(document.querySelector(select.templateOf.bookingWidget).innerHTML),
+  homeWidget: Handlebars.compile(document.querySelector(select.templateOf.homeWidget).innerHTML),
 };
 
 export default settings;
